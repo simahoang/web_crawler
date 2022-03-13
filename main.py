@@ -11,7 +11,7 @@ Enter the number of pages you want to crawl
 The program will export result to coin_prediction.csv
 '''
 pages = 3
-for page in range(pages+1):
+for page in range(1, pages+1):
     res = requests.get(f'https://walletinvestor.com/forecast?page={page}&per-page=100')
     soup = BeautifulSoup(res.text, 'lxml')
 
